@@ -31,25 +31,19 @@ header {
   color: white;
   text-shadow: 0px 5px 10px black;
 }
-header img {
-  width: 50px;
-}
 .header-text {
   width: 80%;
 }
-header div div h2:nth-child(2) {
-  font-size: 30px;
-}
 h1 {
+  margin-bottom: 10px;
   font-size: 45px;
   color: var(--yellow);
-  margin-bottom: 10px;
 }
 header div div h2:nth-child(3) {
+  margin-bottom: 10px;
   font-size: 15px;
   text-transform: lowercase;
   letter-spacing: 2px;
-  margin-bottom: 10px;
 }
 header p {
   width: 75%;
@@ -73,15 +67,15 @@ nav {
 }
 nav a {
   width: 150px;
+  margin: 10px auto;
   padding: 10px 0;
   background-color: white;
   border-radius: 30px;
-  text-align: center;
-  margin: 10px auto;
   font-size: 20px;
+  font-weight: 800;
+  text-align: center;
   text-decoration: none;
   color: var(--grey);
-  font-weight: 800;
 }
 .onas > div:first-child {
   height: 200px;
@@ -98,30 +92,30 @@ nav a {
   color: var(--yellow);
 }
 .onas-text p {
+  padding: 5%;
   text-align: center;
   color: var(--grey);
-  padding: 5%;
 }
 .rozdzielacz {
+  margin-bottom: 20px;
   width: 100%;
   height: 5px;
   background-color: var(--yellow);
-  margin-bottom: 20px;
 }
 .menu {
   padding: 0 5%;
 }
 .menu h3 {
+  font-size: 20px;
   text-align: center;
   color: var(--grey);
-  font-size: 20px;
 }
 .menu h2,
 .promocje h2 {
+  margin-bottom: 20px;
   text-align: center;
   color: var(--yellow);
   font-size: 30px;
-  margin-bottom: 20px;
 }
 ul {
   margin: 20px 0;
@@ -143,13 +137,13 @@ ul li p {
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
-  background-color: var(--grey);
-  color: white;
-  text-decoration: none;
   padding: 20px;
+  background-color: var(--grey);
   font-size: 20px;
-  text-align: center;
   font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  color: white;
 }
 .promocje {
   box-sizing: border-box;
@@ -165,9 +159,9 @@ ul li p {
 .zoltyser {
   box-sizing: border-box;
   width: 100%;
-  border-radius: 20px;
   margin-bottom: 20px;
   padding: 20px;
+  border-radius: 20px;
 }
 .stolat {
   border: 2px solid var(--grey);
@@ -188,12 +182,12 @@ ul li p {
   box-sizing: border-box;
   width: 100%;
   height: 200px;
+  padding: 35px 30px;
   background-image: url(../images/zamowienie.jpg);
   background-repeat: no-repeat;
   background-size: 250%;
   background-position: right;
   text-align: right;
-  padding: 35px 30px;
   color: white;
   text-shadow: 0px 5px 10px black;
 }
@@ -210,8 +204,8 @@ ul li p {
 .img-adres {
   width: 100%;
   height: 200px;
-  overflow: hidden;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 .img-adres img {
   width: 100%;
@@ -231,30 +225,85 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
-  text-align: center;
   margin: 5px auto;
   background-color: var(--yellow);
+  margin: 5px auto;
 }
 .button-footer {
-  width: 100%;
   display: flex;
   justify-content: space-around;
+  width: 100%;
   margin: 5px auto;
   background-color: var(--yellow);
 }
 footer a {
   display: inline-block;
   width: 150px;
+  margin: 20px auto;
   padding: 10px 0;
   background-color: white;
   border-radius: 30px;
-  text-align: center;
-  margin: 20px auto;
   font-size: 20px;
+  font-weight: 800;
+  text-align: center;
   text-decoration: none;
   color: var(--grey);
-  font-weight: 800;
 }
 footer p {
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  header {
+    padding: 10%;
+    background-size: 130%;
+    background-position: left;
+  }
+  .pizzeria {
+    font-size: 40px;
+  }
+  header div div h2:nth-child(3) {
+    font-size: 20px;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .header-text {
+    width: 70%;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  .onas-text h2 {
+    font-size: 30px;
+  }
+  .onas > div:first-child {
+    height: 300px;
+  }
+  .onas div img {
+    transform: translateY(-100px);
+  }
+  .onas-text p {
+    font-size: 20px;
+  }
+  .menu h3 {
+    font-size: 30px;
+  }
+  ul {
+    line-height: 40px;
+  }
+  li {
+    padding: 0 30px;
+  }
+  .zamowienie {
+    padding: 50px 30px;
+  }
+  .img-adres {
+    height: 300px;
+  }
+  .img-adres img {
+    transform: translateY(-200px);
+  }
+  .text-adres p {
+    padding: 10px 50px;
+  }
 }
