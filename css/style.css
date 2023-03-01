@@ -7,6 +7,9 @@
   --grey: #555;
   --neon: "Tilt Neon", cursive;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   width: 100%;
   font-family: "Sen", sans-serif;
@@ -49,7 +52,7 @@ header p {
   width: 75%;
   opacity: 0.8;
 }
-header a {
+.button-pizza {
   display: none;
 }
 nav a:nth-child(1),
@@ -84,7 +87,7 @@ nav a {
 }
 .onas div img {
   width: 100%;
-  transform: translateY(-40px);
+  transform: translateY(-70px);
 }
 .onas-text h2 {
   font-family: var(--neon);
@@ -144,6 +147,9 @@ ul li p {
   text-decoration: none;
   text-align: center;
   color: white;
+}
+.button2 img {
+  display: none;
 }
 .promocje {
   box-sizing: border-box;
@@ -209,7 +215,7 @@ ul li p {
 }
 .img-adres img {
   width: 100%;
-  transform: translateY(-50px);
+  transform: translateY(-70px);
 }
 .adres h2 {
   text-align: center;
@@ -228,6 +234,7 @@ footer {
   margin: 5px auto;
   background-color: var(--yellow);
   margin: 5px auto;
+  text-align: center;
 }
 .button-footer {
   display: flex;
@@ -305,5 +312,266 @@ footer p {
   }
   .text-adres p {
     padding: 10px 50px;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 800px;
+    padding: 100px 150px;
+  }
+  h1 {
+    margin-bottom: 10px;
+    font-size: 80px;
+  }
+  header div div h2:nth-child(3) {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+  header p {
+    width: 75%;
+    font-size: 25px;
+    opacity: 0.8;
+  }
+  .button-pizza {
+    display: block;
+    margin-top: 50px;
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50px;
+  }
+  .button-pizza a {
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: 25px;
+    width: 300px;
+    height: 100px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    background-image: url(../images/button-zamow.jpg);
+    border: 5px solid white;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 100px;
+  }
+  .button-pizza img {
+    transform: translate(+300px, -92px) rotate(0);
+    transition: 1s;
+  }
+  .button-pizza a:hover + img {
+    transform: translate(+208px, -92px) rotate(-50deg);
+  }
+  nav a:nth-child(1),
+  nav a:nth-child(2),
+  nav a:nth-child(4),
+  nav a:nth-child(6) {
+    display: inline-block;
+  }
+
+  nav {
+    max-width: 1440px;
+  }
+  nav a {
+    border: 2px solid transparent;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    background-color: var(--yellow);
+    border: 2px solid white;
+  }
+  .onas {
+    width: 100%;
+    display: flex;
+    height: 500px;
+    margin-bottom: 5px;
+  }
+
+  .onas > div:first-child {
+    height: 500px;
+    width: 100%;
+    border-radius: 0 300px 300px 0;
+    overflow: hidden;
+  }
+  .onas div img {
+    transform: translateY(-100px);
+  }
+  .onas-text {
+    width: 40%;
+  }
+  .onas-text h2 {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+  .onas-text p {
+    padding: 10%;
+    font-size: 25px;
+  }
+  .menu {
+    padding: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .menu h3 {
+    font-size: 40px;
+  }
+  .menu h2,
+  .promocje h2 {
+    width: 100%;
+    margin: 50px auto;
+    font-size: 50px;
+  }
+  .menu > div {
+    width: 30%;
+  }
+  ul {
+    margin: 20px 0 50px;
+    line-height: 40px;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  ul li p {
+    font-size: 20px;
+  }
+  .button2 {
+    margin-top: 50px;
+    width: 100;
+    height: 76px;
+    overflow: hidden;
+  }
+  .button2-zamowienie {
+    font-size: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+  }
+  .button2 img {
+    width: 75px;
+    display: block;
+    transform: translate(+1440px, -76px);
+    animation: pizzaroll 8s linear alternate infinite;
+  }
+  @keyframes pizzaroll {
+    0% {
+      transform: translate(+1840px, -76px) rotate(0);
+    }
+    100% {
+      transform: translate(-500px, -76px) rotate(-1200deg);
+    }
+  }
+  .promocje {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 10%;
+  }
+  .promocje h2 {
+    width: 100%;
+  }
+  .promocje p {
+    font-size: 25px;
+    margin: 10px;
+    color: var(--grey);
+  }
+  .stolat,
+  .zoltyser {
+    box-sizing: border-box;
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  .stolat h3:first-child,
+  .zoltyser h3:first-child {
+    font-size: 30px;
+    color: var(--yellow);
+  }
+  .stolat h3:nth-child(3),
+  .zoltyser h3:nth-child(3) {
+    font-size: 25px;
+  }
+  .zoltyser {
+    border: 2px solid var(--grey);
+  }
+  .zamowienie {
+    margin-top: 50px;
+    height: 400px;
+    padding: 35px 30px;
+    background-size: 200%;
+    text-shadow: 0px 5px 10px black;
+  }
+  .zamowienie p {
+    width: 50%;
+    font-size: 50px;
+    margin: 10px 0 0 auto;
+  }
+  .zamowienie h3 {
+    font-size: 60px;
+    font-weight: 400;
+  }
+  .zamowienie h2 {
+    font-size: 80px;
+    color: var(--yellow);
+  }
+  .adres {
+    margin-top: 5px;
+    display: flex;
+    height: 500px;
+    width: 100%;
+  }
+  .img-adres {
+    width: 60%;
+    height: 500px;
+    margin-bottom: 5px;
+    border-radius: 300px 0 0 300px;
+    overflow: hidden;
+  }
+  .text-adres {
+    width: 40%;
+  }
+  .img-adres img {
+    width: 100%;
+    transform: translateY(-50px);
+  }
+  .adres h2 {
+    font-size: 50px;
+    margin: 50px auto;
+  }
+  .text-adres p {
+    padding: 15px 10%;
+    color: var(--grey);
+    text-align: center;
+    font-size: 20px;
+  }
+  .button-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 5px auto;
+    background-color: var(--yellow);
+  }
+  footer {
+    max-width: 1440px;
+  }
+  footer a {
+    padding: 20px 20px;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: 800;
+    border: 2px solid transparent;
+  }
+  footer a:hover {
+    background-color: var(--yellow);
+    border: 2px solid white;
+  }
+  footer p {
+    margin-bottom: 10px;
   }
 }
